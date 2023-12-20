@@ -18,10 +18,10 @@ function Signup() {
                 email,password
             })
             .then(res=>{
-                if(res.data=="exist"){
+                if(res.data==="exist"){
                     alert("User already exists")
                 }
-                else if(res.data=="notexist"){
+                else if(res.data==="notexist"){
                     history("/home",{state:{id:email}})
                 }
             })

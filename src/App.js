@@ -1,6 +1,6 @@
 // App.js
-import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, Link, Navigate } from 'react-router-dom';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
 import Home from './Pages/Home';
 import Trivia1 from './Pages/Trivia1';
 import Profile from './Pages/Profile';
@@ -11,8 +11,7 @@ import CalendarCreation from './Pages/Create-Calendar';
 import Signup2 from './Pages/Signup';
 import EventDetailPage from './Pages/EventDetailPage';
 import CalendarEventDetailPage from './Pages/CalendarEventDetailPage';
-import { useAuth } from './AuthContext';
-import { useNavigate } from 'react-router-dom';
+
 
 
 const SearchModal = ({ onClose }) => {

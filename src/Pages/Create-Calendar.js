@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { BrowserRouter as Router, Route, Routes, Link, useNavigate } from 'react-router-dom';
+import { BrowserRouter as useNavigate } from 'react-router-dom';
 
 
 const CreateCalendar = () => {
@@ -60,6 +60,10 @@ const CreateCalendar = () => {
             console.error('Error creating calendar event:', error);
             console.log('calendar event failed');
             setError('Error please try again....')
+            console.log(setCircle)
+            console.log(setCalendarName)
+            console.log(setLocation)
+            console.log(setCalendarDescription)
           });
       };
     return (

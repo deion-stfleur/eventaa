@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import '../../src/App.css'
 import axios from 'axios';
 import { useNavigate, Link } from "react-router-dom"
@@ -19,10 +19,10 @@ const Auth = ({onSignUp}) => {
                 email,password
             })
             .then(res=>{
-                if(res.data=="exist"){
+                if(res.data==="exist"){
                     history("/home",{state:{id:email}})
                 }
-                else if(res.data=="notexist"){
+                else if(res.data==="notexist"){
                     alert("User have not sign up")
                 }
             })
