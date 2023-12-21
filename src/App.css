@@ -532,7 +532,7 @@ canvas.mapboxgl-canvas {
   text-decoration: underline;
   text-underline-offset: 8px;
   text-decoration-thickness: 3px;
-  text-decoration-color: black;
+  text-decoration-color: white;
 }
 
 .paste-img {
@@ -757,7 +757,6 @@ canvas.mapboxgl-canvas {
   justify-content: space-between;
   width: 90%;
   margin: auto;
-  padding-top: 21px;
 }
 
 .animated-btns {
@@ -779,6 +778,8 @@ canvas.mapboxgl-canvas {
   color: white;
   font-size: 28px;
   font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: unset;
 }
 
 .animated-btns p {
@@ -907,6 +908,7 @@ width: 175px;
 .events-section-2 {
   padding: unset;
   width: 75%;
+  margin-top: 17px;
 }
 
 .inner-left input {
@@ -1104,6 +1106,11 @@ input.eo-input {
   font-size: 14px;
 }
 
+.gLists-containter {
+  max-width: 620px;
+  margin: auto;
+}
+
 .invite-guests-btn {
   background-color: #3a3737;
   border-radius: 6px;
@@ -1210,11 +1217,12 @@ input.eo-input {
   margin-top: unset;
   margin-bottom: unset;
   font-size: 16px;
+  font-weight: bold;
 }
 
 .join-cta {
   border: 1px solid;
-  max-width: 130px;
+  max-width: 86px;
   text-align: center;
   padding: 2px;
   margin-top: 31px;
@@ -1233,6 +1241,32 @@ input.eo-input {
   .nav-roww svg {
     margin-left: 8px;
     margin-right: 8px;
+}
+.trending-title {
+  margin-top: 46px;
+}
+
+.data-section-2 {
+  margin-bottom: 100px;
+}
+#imageUrl {
+  width: unset;
+}
+
+.inner-left {
+  width: unset;
+}
+
+.inner-left input {
+  width: 90%;
+}
+
+.create-btn {
+  width: 100%;
+}
+
+.mapboxgl-map {
+  display: none;
 }
 
 .nav-links a:nth-child(1) {

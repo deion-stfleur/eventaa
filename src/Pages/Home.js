@@ -3,6 +3,10 @@ import '../../src/App.css'
 import { BrowserRouter as Router, Route, Routes, Link, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { FaArrowRight } from "react-icons/fa";
+import { TbAlertSquare } from "react-icons/tb";
+import { CiLocationOn } from "react-icons/ci";
+
+
 
 
 
@@ -63,9 +67,9 @@ const Home = () => {
           <Link to={`/event/${event._id}`}>
             <div className='invited-section'>
               <div className='is1'>
-              <strong>Event Name:</strong> {event.eventName},{' '}
+              <strong></strong> {event.eventName}{' '}
             <br />
-            <strong>Location:</strong> {event.location},{' '}
+            <strong></strong><CiLocationOn style={{fontSize: 19}} /> {event.location},{' '}
             <br />
             <strong>Start Date:</strong> {new Date(event.startDate).toLocaleString()},{' '}
             <br />
@@ -85,7 +89,7 @@ const Home = () => {
 ) : (
   <>
   <div className='no-img-btn'>
-  <p>No image</p>
+  <p style={{color: 'yellow',marginTop: 13, fontSize: 16,fontWeight:'bold'}}><TbAlertSquare /> No Image</p>
   </div>
   </>
 )}

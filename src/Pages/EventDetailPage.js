@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { MdAddAlert } from "react-icons/md";
+import { GrSend } from "react-icons/gr";
+import { CiShare2 } from "react-icons/ci";
+
+
+
 
 // import Modal from './Modal';
 
@@ -140,15 +146,15 @@ const EventDetailPage = () => {
 
                                     <div className='inner-tab-row'>
                                     <div onClick={handleGuestClick} className='tab-btn'>
-                                        <p>Add Reminder</p>
+                                        <p>Add Reminder <MdAddAlert /></p>
                                     </div>
 
                                     <div className='tab-btn'>
-                                        <p>Send Post</p>
+                                        <p>Send Post <GrSend /></p>
                                     </div>
 
                                     <div onClick={handleOverviewClick} className='tab-btn'>
-                                        <p>Share Event</p>
+                                        <p>Share Event <CiShare2 /></p>
                                     </div>
                                     </div>
 
@@ -215,20 +221,25 @@ const EventDetailPage = () => {
                         )}
                         {activeTab === 'guests' && (
                             <>
-                                <p>Guests Lists</p>
+                            <div className='gLists-containter'>
+                                <p className='white-txt'>Guests Lists</p>
+                            </div>
+
                             </>
                         )}
                         {activeTab === 'more' && (
                             <>
-                                <p>Clone Event</p>
+                            <div className='gLists-containter'>
+                                <p className='white-txt'>Clone Event</p>
 
 
                                 <div>
-                                    <p>Event Page</p>
+                                    <p className='white-txt'>Event Page</p>
 
-                                    <p>Public URL</p>
-                                    <p>{currentUrl}</p>
+                                    <p className='white-txt'>Public URL</p>
+                                    <p className='white-txt'>{currentUrl}</p>
                                 </div>
+                            </div>
                             </>
                         )}
                     </>
