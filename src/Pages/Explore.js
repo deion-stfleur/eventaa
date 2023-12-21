@@ -69,7 +69,7 @@ const Explore = () => {
       {events.map((event) => (
         <>
         
-        <div style={{width: '24%'}}>
+        <div className='wd-24'>
 
           <div>
           <li className='trending-card' key={event._id}>

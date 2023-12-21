@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react';
 import '../../src/App.css'
 import { BrowserRouter as Router, Route, Routes, Link, useLocation } from 'react-router-dom';
 import axios from 'axios';
+import { FaArrowRight } from "react-icons/fa";
+
 
 
 const Home = () => {
@@ -37,11 +39,11 @@ const Home = () => {
         <div className='animated-btns'>
 
           <div style={{marginRight: 15}}>
-            <p>Upcoming</p>
+            <p className='dnone'>Upcoming</p>
           </div>
 
           <div>
-            <p>Past</p>
+            <p className='dnone'>Past</p>
           </div>
         </div>
       </div>
@@ -92,6 +94,13 @@ const Home = () => {
 
             </div>
             </Link>
+
+            <div className='join-cta'>
+            
+              <p>Join  <FaArrowRight /></p>
+             
+              
+              </div>
           </li>
           {/* <hr className='line-comp' /> */}
           </div>

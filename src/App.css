@@ -544,7 +544,7 @@ canvas.mapboxgl-canvas {
 
 .nav-links a:hover {
   color: white;
-  font-size: 17px;
+  font-size: 15px;
   text-decoration: underline !important;
   text-underline-offset: 8px;
   text-decoration-thickness: 3px !important;
@@ -1048,11 +1048,17 @@ input.eo-input {
 .nav-links a {
   color: white;
   text-decoration: unset !important;
-  font-size: 17px;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 .cr-event-cta a {
   text-decoration: unset;
+}
+
+.nav-roww {
+  display: flex;
+  align-items: center;
 }
 
 
@@ -1171,6 +1177,11 @@ input.eo-input {
 }
 
 
+.dnone {
+  display: none;
+}
+
+
 
 .btn-container {
   display: flex;
@@ -1185,10 +1196,75 @@ input.eo-input {
   border-radius: 6px;
 }
 
+.event-lists svg {
+  font-size: 11px;
+  line-height: 21px;
+}
+
+.inner-join {
+  display: flex;
+  align-items: center;
+}
+
+.join-cta p {
+  margin-top: unset;
+  margin-bottom: unset;
+  font-size: 16px;
+}
+
+.join-cta {
+  border: 1px solid;
+  max-width: 130px;
+  text-align: center;
+  padding: 2px;
+  margin-top: 31px;
+  border-radius: 5px;
+}
+
+.wd-24 {
+  width: 24%;
+}
+
 @media (max-width: 768px) {
   .events-section {
     display: block;
   }
+
+  .nav-roww svg {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.nav-links a:nth-child(1) {
+  display: none;
+}
+.inner-home-segments {
+  padding-top: unset;
+}
+
+.events-section-2 {
+  width: unset;
+}
+.invited-section {
+  width: unset;
+}
+.event-lists {
+  padding: 21px;
+}
+
+.events-top-comp {
+  display: block;
+}
+
+.left-panel {
+  width: unset;
+}
+.trending-subscribe-section {
+  display: unset;
+}
+.wd-24 {
+  width: 100%;
+}
 }
 
 @keyframes App-logo-spin {

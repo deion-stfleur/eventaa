@@ -11,6 +11,13 @@ import CalendarCreation from './Pages/Create-Calendar';
 import Signup2 from './Pages/Signup';
 import EventDetailPage from './Pages/EventDetailPage';
 import CalendarEventDetailPage from './Pages/CalendarEventDetailPage';
+import { GiPartyPopper } from "react-icons/gi";
+import { TbViewfinder } from "react-icons/tb";
+import { IoCalendarOutline } from "react-icons/io5";
+import { FaSearch } from "react-icons/fa";
+
+
+
 
 
 
@@ -59,18 +66,39 @@ function App() {
           <ul className='nav-links'>
            
                 <li>
+                  <div className='nav-roww'>
                   <Link to="/home">All Events</Link>
+                  <Link to="/home">
+                  <GiPartyPopper />
+                  </Link>
+                  </div>
+
                 </li>
 
                 <li>
+                  <div className='nav-roww'>
                   <Link id="second-middle" to="/explore">Explore</Link>
+                  <Link to="/explore">
+                  <TbViewfinder />
+                  </Link>
+                    </div>
                 </li>
 
                 <li>
+                  <div className='nav-roww'>
                   <Link id="second-middle" to="/calendar">Calendar</Link>
+                  <Link to="/calendar">
+                  <IoCalendarOutline />
+                  </Link>
+                  </div>
                 </li>
                 <li>
+                  <div className='nav-roww'>
                   <Link id="middle" onClick={openSearchModal}>Search</Link>
+                  <Link onClick={openSearchModal}>
+                  <FaSearch />
+                  </Link>
+                  </div>
                 </li>
              
           
