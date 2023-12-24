@@ -4,6 +4,15 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { MdAddAlert } from "react-icons/md";
 import { GrSend } from "react-icons/gr";
 import { CiShare2 } from "react-icons/ci";
+import { CiClock2 } from "react-icons/ci";
+import { FaFacebook } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa";
+import { FcFeedback } from "react-icons/fc";
+
+
+
+
 
 
 
@@ -148,14 +157,14 @@ const EventDetailPage = () => {
                                     <div onClick={handleGuestClick} className='tab-btn'>
                                         <p>Add Reminder <MdAddAlert /></p>
                                     </div>
-
-                                    <div className='tab-btn'>
-                                        <p>Send Post <GrSend /></p>
-                                    </div>
-
                                     <div onClick={handleOverviewClick} className='tab-btn'>
                                         <p>Share Event <CiShare2 /></p>
                                     </div>
+
+                                    {/* <div className='tab-btn'>
+                                        <p>Send Post <GrSend /></p>
+                                    </div> */}
+
                                     </div>
 
                                 </div>
@@ -180,6 +189,9 @@ const EventDetailPage = () => {
                                     <div className='sep-line'></div>
                                 <div className='inner-event-detail-api-col-right'>
                                     <p className='inner-event-detail-api-col-left-title'>Feedback</p>
+                                    <FcFeedback className='feed-icon' />
+                                    <p className='fc-text'>No Feedback Collected</p>
+                                    <p className='fc-copy'>Send feedback message</p>
                                 </div>
                                     </div>
 
@@ -202,12 +214,12 @@ const EventDetailPage = () => {
                                     <div className='invite-bubble'>
                                         <div className='invite-row-2'>
                                             <div className='invite-icon'>
-                                                <p>icon</p>
+                                            <CiClock2 className='clockIcon' />
                                             </div>
 
                                             <div>
-                                                <p className='invite-title'>test</p>
-                                                <p className='invite-copy'>test</p>
+                                                <p className='invite-title'>No guests yet</p>
+                                                <p className='invite-copy'>Once guests have been invited they will show here.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -258,20 +270,23 @@ const EventDetailPage = () => {
                     <div className='icon-row'>
 
                         <div>
-                            <p>Facebook</p>
+                        <FaFacebook className='shareable-links' />
+                            <p className='shareable-text'>Facebook</p>
                         </div>
                         <div>
-                            <p>Tweet</p>
+                        <FaSquareXTwitter className='shareable-links' />
+                            <p className='shareable-text'>Tweet</p>
                         </div>
                         <div>
-                            <p>Linkedin</p>
+                        <FaLinkedin className='shareable-links' />
+                            <p className='shareable-text'>Linkedin</p>
                         </div>
-                        <div>
+                        {/* <div>
                             <p>Email</p>
                         </div>
                         <div>
                             <p>Text</p>
-                        </div>
+                        </div> */}
 
                     </div>
 

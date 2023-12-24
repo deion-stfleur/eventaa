@@ -11,6 +11,7 @@ import CalendarCreation from './Pages/Create-Calendar';
 import Signup2 from './Pages/Signup';
 import EventDetailPage from './Pages/EventDetailPage';
 import CalendarEventDetailPage from './Pages/CalendarEventDetailPage';
+import Main from './Pages/Main';
 import { GiPartyPopper } from "react-icons/gi";
 import { TbViewfinder } from "react-icons/tb";
 import { IoCalendarOutline } from "react-icons/io5";
@@ -114,6 +115,7 @@ function App() {
           <hr />
         {isSearchModalOpen && <SearchModal onClose={closeSearchModal} />}
         <Routes>
+          <Route path="/" element={<Main />} />
           <Route path="/home" element={<Home />} />
           <Route path="/events" element={<Trivia1 />} />
           <Route path="/profile" element={<Profile />} />

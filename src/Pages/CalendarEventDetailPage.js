@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 const CalendarEventDetailPage = () => {
     const { calendarEventId } = useParams();
     const [eventDetails, setEventDetails] = useState(null);
+    const [imgNull, setImgNull] = useState(null);
     useEffect(() => {
         const fetchEventDetails = async () => {
             try {
@@ -40,13 +41,18 @@ const CalendarEventDetailPage = () => {
                         <>
                             {/* <p>Overview1</p> */}
 
-
-                            <img className='paste-img-3' src={eventDetails.data.pastedUrlCover} alt="Thumbnail" />
+                            {
+                                imgNull ? (
+                                    <img className='paste-img-3' src="https://images.unsplash.com/photo-1461088945293-0c17689e48ac?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+                                    ) : (
+                                        <img className='paste-img-3' src={eventDetails.data.pastedUrlCover} alt="Thumbnail" />
+                                )
+                            }
 
                             <div className='subscribe-btn'>
                                 <p>Subscribe</p>
                             </div>
-                            <p style={{color:'white',fontSize: 40, fontWeight: '700'}}>Calendar Event Name</p>
+                            <p style={{ color: 'white', fontSize: 40, fontWeight: '700' }}>Calendar Event Name</p>
                             <p className='white-txt'>
                                 <strong>Description:</strong> {eventDetails.data.calendarDescription},{' '}
 
@@ -57,13 +63,12 @@ const CalendarEventDetailPage = () => {
                             </p>
 
                             <div>
-                                <p className='white-txt'>Hosts</p>
-                                <p className='white-txt'>hosts, special guests, and event managers.</p>
+                      
 
-                                <p>More Event Dates</p>
-
-                                <div>
+                                <div className='submit-event-btn'>
+                                    <Link to="/events" style={{textDecoration: 'unset'}}>
                                     <p>+ Submit Events</p>
+                                    </Link>
                                 </div>
                             </div>
                         </>
